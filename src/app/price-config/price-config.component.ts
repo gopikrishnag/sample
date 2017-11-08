@@ -38,7 +38,7 @@ export class PriceConfigComponent implements OnInit {
     //   Profit: 12,
     //   ValidityHours: 12,
     //   LatestCutOffDate: new Date('February 4, 2016 10:13:00'),
-    //   VAT: 88
+    //   VAT: 87
     // };
 
     this.priceConfig.LatestCutOffDate = new Date('February 4, 2016 10:13:00');
