@@ -1,0 +1,29 @@
+<div class="row">
+  <section class="col-xs-9">
+    <p>Price Config</p>
+    <section *ngIf='priceConfig'>
+    <label>AM Price</label>
+    <input type="text" class="form-control"  [(ngModel)]='priceConfig.DeliveryCost' >
+    <label>PM Price</label>
+    <input type="text" class="form-control"  [(ngModel)]='priceConfig.PMPrice' >
+    <label>VAT</label>
+    <input type="text" class="form-control"  [(ngModel)]='priceConfig.VAT' >
+    <label>Profit</label>
+    <input type="text" class="form-control"  [(ngModel)]='priceConfig.Profit' >
+    <label>Delivery cost</label>
+    <input type="text" class="form-control"  [(ngModel)]='priceConfig.DeliveryCost' >
+    <label>Validity hours</label>
+    <input type="text" class="form-control"  [(ngModel)]='priceConfig.ValidityHours' >
+    <label>Cut-off date</label>
+    <!-- <input type="text" class="form-control"  [(ngModel)]="newServerContent" > -->
+  </section>
+  </section>
+     <section class="col-xs-9">
+    <button 
+    class = "btn btn-primary"
+    (click)= "updatePriceConfig()">Update</button>
+    <button class="btn btn-info"
+    (click)="onAddBlueprint()">Cancel</button>
+  </section>
+  </div>
+  

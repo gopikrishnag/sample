@@ -1,0 +1,13 @@
+<div class="row" >
+  <div class="col-xs-12 col-sm-4" >
+    <div class="list-group">
+      <a 
+      [routerLink] = "['/admin',adminSec.shortName]"
+      href="#"
+      class="list-group-item"
+      *ngFor="let adminSec of adminSections">
+      {{adminSec.name}}
+    </a>
+    </div>
+     </div>
+  </div>
