@@ -19,6 +19,12 @@ import { AuthService} from './auth-service';
 import { PriceConfigService } from './Services/price-config.service';
 
 import { PriceConfigComponent } from './price-config/price-config.component';
+import { IcDatepickerModule } from 'ic-datepicker';
+import {ToastModule, ToastOptions} from 'ng2-toastr/ng2-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CustomOption } from './custom-option';
+
+
 
 // const appRoutes: Routes = [
 //   {path: '', component: HomeComponent },
@@ -49,13 +55,20 @@ import { PriceConfigComponent } from './price-config/price-config.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ToastModule.forRoot(),
     FormsModule,
   //  RouterModule.forRoot(appRoutes)
   AppRoutingModule,
+  IcDatepickerModule,
   HttpModule
   
   ],
-  providers: [ AuthService , AuthGuard, PriceConfigService],
+  providers: [ AuthService , 
+              AuthGuard, 
+              PriceConfigService, 
+              //ToastOptions,
+              {provide: ToastOptions, useClass: CustomOption}],
   bootstrap: [AppComponent]
 // bootstrap: [ServerElementComponent]
 })

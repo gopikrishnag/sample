@@ -16,6 +16,7 @@
     <input type="text" class="form-control"  [(ngModel)]='priceConfig.ValidityHours' >
     <label>Cut-off date</label>
     <!-- <input type="text" class="form-control"  [(ngModel)]="newServerContent" > -->
+    <ic-datepicker [(ngModel)]='priceConfig.LatestCutOffDate' (dateChange)="onDatepickerDateChange($event)"></ic-datepicker>
   </section>
   </section>
      <section class="col-xs-9">
@@ -23,7 +24,7 @@
     class = "btn btn-primary"
     (click)= "updatePriceConfig()">Update</button>
     <button class="btn btn-info"
-    (click)="onAddBlueprint()">Cancel</button>
+    (click)="testToaster()">Cancel</button>
   </section>
   </div>
   
