@@ -1,12 +1,14 @@
 
 import { NgModule, } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
+
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { ClientComponent } from './client/client.component';
 import { ClientsComponent } from './clients/clients.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PriceConfigComponent } from './price-config/price-config.component';
+import { LoginComponent} from './login/index';
 // import { AppComponent } from './app.component';
 
 import { ServerElementComponent } from './server-element/server-element.component';
@@ -17,7 +19,7 @@ const appRoutes: Routes = [
     {path: 'admin', component: AdminComponent },
    // {path: 'clients', component: ClientsComponent },
    // {path: 'clients/:id/:name', component: ClientComponent},
-   {path: 'clients', 
+   {path: 'clients',
     // canActivate: [AuthGuard] ,
     canActivateChild: [AuthGuard],
     component: ClientsComponent, children: [
@@ -26,6 +28,7 @@ const appRoutes: Routes = [
     {path: 'inputoutput', component: InputOutputComponent},
     {path: 'admin/PriceConfig', component: PriceConfigComponent},
     {path: 'admin/DeliveryManagment', component: InputOutputComponent},
+    {path: 'login', component: LoginComponent},
     {path: '**', component: NotFoundComponent}
   // {path: '**', redirectTo:'/login'}
   ];
