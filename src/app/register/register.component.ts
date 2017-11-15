@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 import {  UserService, AlertService } from '../services/index';
 
 @Component({
@@ -24,15 +25,17 @@ export class RegisterComponent implements OnInit {
   }
   register() {
     this.loading =  true;
-    this.userService.create(this.model)
-      .subscribe(
-      data => {
-        this.alertService.success('Registration successful', true);
-        this.router.navigate(['/login']);
-      },
-      error => {
-        this.alertService.error(error);
-        this.loading = false;
-      });
+    this.alertService.success('Registration successful', true);
+
+    // this.userService.create(this.model)
+    //   .subscribe(
+    //   data => {
+    //     this.alertService.success('Registration successful', true);
+    //     this.router.navigate(['/login']);
+    //   },
+    //   error => {
+    //     this.alertService.error(error);
+    //     this.loading = false;
+    //   });
   }
 }
