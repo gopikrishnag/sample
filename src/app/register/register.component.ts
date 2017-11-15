@@ -10,7 +10,7 @@ import {  UserService, AlertService } from '../services/index';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+//http://embed.plnkr.co/9luTng/?show=preview   -- Gopi
   model: any = {};
   loading = false;
 
