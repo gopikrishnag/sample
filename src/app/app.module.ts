@@ -16,7 +16,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService} from './auth-service';
-import { PriceConfigService } from './Services/index';
+import { PriceConfigService, AlertService, AuthenticationService, UserService } from './services/index';
 
 import { PriceConfigComponent } from './price-config/price-config.component';
 import { IcDatepickerModule } from 'ic-datepicker';
@@ -24,6 +24,7 @@ import {ToastModule, ToastOptions} from 'ng2-toastr/ng2-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CustomOption } from './custom-option';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -53,7 +54,8 @@ import { LoginComponent } from './login/login.component';
     ClientsComponent,
     NotFoundComponent,
     PriceConfigComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -69,6 +71,9 @@ import { LoginComponent } from './login/login.component';
   providers: [ AuthService ,
               AuthGuard,
               PriceConfigService,
+              AlertService,
+              AuthenticationService,
+              UserService,
               //ToastOptions,
               {provide: ToastOptions, useClass: CustomOption}],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { PriceConfigService } from '../Services/price-config.service';
+import { PriceConfigService } from '../services/price-config.service';
 import { IpriceConfig } from '../Interface/iprice-config';
 import { ToastsManager, Toast } from 'ng2-toastr/ng2-toastr';
 import { Router } from '@angular/router';
@@ -77,7 +77,7 @@ export class PriceConfigComponent implements OnInit {
       (error) => (
         this.toastr.error('This is not good!', 'Oops!')
       )
-    
+
     );
 
 
